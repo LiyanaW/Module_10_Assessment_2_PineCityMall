@@ -1,27 +1,39 @@
-<!DOCTYPE html><html lang='en'><head>
-<meta charset='UTF-8'><title>Contact - Pine City Mall</title>
-<link rel='stylesheet' href='css/style.css'>
-</head><body><header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Pine City Mall</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
   <h1>Pine City Mall</h1>
   <nav>
-    <a href='index.html'>Home</a>
-    <a href='about.html'>About</a>
-    <a href='map.html'>Map</a>
-    <a href='shops.html'>Shops</a>
-    <a href='movies.html'>Movies</a>
-    <a href='contact.html'>Contact</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="map.html">Map</a>
+    <a href="shops.html">Shops</a>
+    <a href="movies.html">Movies</a>
+    <a href="contact.html" class="active">Contact</a>
   </nav>
 </header>
-<main><h2>Contact Us</h2>
-<img src='images/contact-banner.jpg' style='width:100%;border-radius:10px;margin-bottom:1rem;'>
-<p>Address: 123 Main Street, Pine City<br>
-Phone: +27 11 555 1234<br>
-Email: info@pinecitymall.co.za<br>
-Hours: Mon–Sun 9am–9pm</p>
-<form action='#' method='post'>
-<input type='text' name='name' placeholder='Your Name' required>
-<input type='email' name='email' placeholder='Your Email' required>
-<textarea name='message' rows='5' placeholder='Your Message'></textarea>
-<button type='submit'>Send Message</button>
-</form>
-</main><footer><p>&copy; 2025 Pine City Mall — All rights reserved.</p></footer></body></html>
+
+<main>
+  <h2>Contact Us</h2>
+  <form class="contact-form">
+    <label>Name:</label>
+    <input type="text" placeholder="Your Name" required>
+    <label>Email:</label>
+    <input type="email" placeholder="you@example.com" required>
+    <label>Message:</label>
+    <textarea rows="5" placeholder="Your message..." required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</main>
+
+<footer>
+  <p>© 2025 Pine City Mall — All rights reserved.</p>
+</footer>
+</body>
+</html>
