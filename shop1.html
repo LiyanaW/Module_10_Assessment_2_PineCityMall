@@ -1,14 +1,48 @@
-<!DOCTYPE html>
-<html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title>Style Haven | Pine City Mall</title>
-<link rel='stylesheet' href='css/style.css'>
-</head><body>
-<header><h1>Style Haven</h1>
-<nav><a href='index.html'>Home</a><a href='shops.html'>Shops</a><a href='movies.html'>Movies</a><a href='map.html'>Map</a><a href='contact.html'>Contact</a></nav></header>
-<main>
-<img src='images/style-haven-logo.png' alt='Style Haven logo' class='shop-logo'>
-<p>Trendy clothing for men & women.</p>
-<div class='gallery'><img src='images/shop1-1.jpg' alt='Gallery'><img src='images/shop1-2.jpg' alt='Gallery'><img src='images/shop1-3.jpg' alt='Gallery'></div>
-</main>
-<footer><p>&copy; 2025 Pine City Mall</p></footer>
-</body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Style Haven | Pine City Mall</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html"><span class="logo">PC</span><h1>Pine City Mall</h1></a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../map.html">Map</a>
+        <a href="../shops.html" class="active">Shops</a>
+        <a href="../movies.html">Movies</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+      <button class="hamburger" onclick="toggleMobile()">☰</button>
+    </div>
+    <div class="container mobile-toggle" id="mobileNav" style="display:none;padding-bottom:12px;">
+      <nav style="display:flex;flex-direction:column;gap:8px">
+        <a href="../index.html">Home</a><a href="../about.html">About</a><a href="../map.html">Map</a><a href="../shops.html">Shops</a><a href="../movies.html">Movies</a><a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top:22px;">
+    <img src="../images/style-haven-logo.jpg" alt="Style Haven logo" class="shop-logo">
+    <h2>Style Haven</h2>
+    <p><strong>Category:</strong> Clothing & Fashion</p>
+    <p>Trendy and affordable fashion for all ages. Visit us on Level 1, near the north entrance.</p>
+
+    <div class="gallery" style="margin-top:18px">
+      <img src="../images/style-haven-1.jpg" alt="">
+      <img src="../images/style-haven-2.jpg" alt="">
+      <img src="../images/style-haven-3.jpg" alt="">
+    </div>
+
+    <p style="margin-top:16px;"><a href="../shops.html" class="btn" style="background:transparent;color:var(--accent);border:1px solid var(--accent);">← Back to Shops</a></p>
+  </main>
+
+  <footer class="footer"><div class="container"><p>© 2025 Pine City Mall</p></div></footer>
+  <script>function toggleMobile(){const el=document.getElementById('mobileNav');el.style.display=(el.style.display==='none'?'block':'none');}</script>
+</body>
+</html>

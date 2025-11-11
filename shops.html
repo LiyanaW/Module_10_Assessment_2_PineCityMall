@@ -1,56 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Shops | Pine City Mall</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-  <h1>Pine City Mall</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="map.html">Map</a>
-    <a href="shops.html" class="active">Shops</a>
-    <a href="movies.html">Movies</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><span class="logo">PC</span><h1>Pine City Mall</h1></a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="map.html">Map</a>
+        <a href="shops.html" class="active">Shops</a>
+        <a href="movies.html">Movies</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="hamburger" onclick="toggleMobile()">☰</button>
+    </div>
+    <div class="container mobile-toggle" id="mobileNav" style="display:none;padding-bottom:12px;">
+      <nav style="display:flex;flex-direction:column;gap:8px">
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="map.html">Map</a><a href="shops.html">Shops</a><a href="movies.html">Movies</a><a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<main>
-  <h2>Featured Shops</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="images/shop1.jpg" alt="Fashion Hub">
-      <h3><a href="shops/shop1.html">Fashion Hub</a></h3>
+  <main class="container" style="padding-top:22px;">
+    <h2>Featured Shops</h2>
+    <div class="grid shop-list">
+      <div class="card">
+        <img src="images/shop1.jpg" alt="Style Haven">
+        <h3><a href="shops/shop1.html">Style Haven</a></h3>
+      </div>
+      <div class="card">
+        <img src="images/shop2.jpg" alt="FreshMart">
+        <h3><a href="shops/shop2.html">FreshMart</a></h3>
+      </div>
+      <div class="card">
+        <img src="images/shop3.jpg" alt="Tech Hub">
+        <h3><a href="shops/shop3.html">Tech Hub</a></h3>
+      </div>
+      <div class="card">
+        <img src="images/shop4.jpg" alt="Book Nook">
+        <h3><a href="shops/shop4.html">Book Nook</a></h3>
+      </div>
+      <div class="card">
+        <img src="images/shop5.jpg" alt="Gadget World">
+        <h3><a href="shops/shop5.html">Gadget World</a></h3>
+      </div>
+      <div class="card">
+        <img src="images/shop6.jpg" alt="Food Court">
+        <h3><a href="shops/shop6.html">Food Court</a></h3>
+      </div>
     </div>
-    <div class="card">
-      <img src="images/shop2.jpg" alt="Tech World">
-      <h3><a href="shops/shop2.html">Tech World</a></h3>
-    </div>
-    <div class="card">
-      <img src="images/shop3.jpg" alt="Gourmet Café">
-      <h3><a href="shops/shop3.html">Gourmet Café</a></h3>
-    </div>
-    <div class="card">
-      <img src="images/shop4.jpg" alt="Toy Planet">
-      <h3><a href="shops/shop4.html">Toy Planet</a></h3>
-    </div>
-    <div class="card">
-      <img src="images/shop5.jpg" alt="Home Living">
-      <h3><a href="shops/shop5.html">Home Living</a></h3>
-    </div>
-    <div class="card">
-      <img src="images/shop6.jpg" alt="Book Haven">
-      <h3><a href="shops/shop6.html">Book Haven</a></h3>
-    </div>
-  </div>
-</main>
+  </main>
 
-<footer>
-  <p>© 2025 Pine City Mall — All rights reserved.</p>
-</footer>
+  <footer class="footer"><div class="container"><p>© 2025 Pine City Mall — All rights reserved.</p></div></footer>
+  <script>function toggleMobile(){const el=document.getElementById('mobileNav');el.style.display=(el.style.display==='none'?'block':'none');}</script>
 </body>
 </html>

@@ -1,39 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Contact | Pine City Mall</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-  <h1>Pine City Mall</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="map.html">Map</a>
-    <a href="shops.html">Shops</a>
-    <a href="movies.html">Movies</a>
-    <a href="contact.html" class="active">Contact</a>
-  </nav>
-</header>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><span class="logo">PC</span><h1>Pine City Mall</h1></a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="map.html">Map</a>
+        <a href="shops.html">Shops</a>
+        <a href="movies.html">Movies</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <button class="hamburger" onclick="toggleMobile()">☰</button>
+    </div>
+    <div class="container mobile-toggle" id="mobileNav" style="display:none;padding-bottom:12px;">
+      <nav style="display:flex;flex-direction:column;gap:8px">
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="map.html">Map</a><a href="shops.html">Shops</a><a href="movies.html">Movies</a><a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<main>
-  <h2>Contact Us</h2>
-  <form class="contact-form">
-    <label>Name:</label>
-    <input type="text" placeholder="Your Name" required>
-    <label>Email:</label>
-    <input type="email" placeholder="you@example.com" required>
-    <label>Message:</label>
-    <textarea rows="5" placeholder="Your message..." required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</main>
+  <main class="container" style="padding-top:22px;">
+    <h2>Contact Us</h2>
+    <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks — message sent (demo).')">
+      <label for="name">Name</label>
+      <input id="name" type="text" placeholder="Your name" required>
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="you@example.com" required>
+      <label for="message">Message</label>
+      <textarea id="message" rows="5" placeholder="Your message..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
 
-<footer>
-  <p>© 2025 Pine City Mall — All rights reserved.</p>
-</footer>
+  <footer class="footer"><div class="container"><p>© 2025 Pine City Mall — All rights reserved.</p></div></footer>
+  <script>function toggleMobile(){const el=document.getElementById('mobileNav');el.style.display=(el.style.display==='none'?'block':'none');}</script>
 </body>
 </html>
