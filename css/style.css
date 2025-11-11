@@ -1,62 +1,126 @@
-/* General Styles */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
+/* css/style.css - unified Teal & White theme */
+:root{
+  --bg:#f7fbfb;
+  --card:#ffffff;
+  --accent:#0fb5a8; /* teal */
+  --accent-600:#0aa794;
+  --muted:#6b7785;
+  --navy:#04303a;
+  --radius:12px;
+  --shadow: 0 8px 20px rgba(2,25,30,0.06);
+  --glass: rgba(255,255,255,0.6);
+  --transition: 220ms cubic-bezier(.2,.9,.3,1);
+  font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
-/* Hero Section */
-.hero {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background: url('https://images.unsplash.com/photo-1584270354949-2bdb38509e77?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Reset & base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background: linear-gradient(180deg, var(--bg), #ffffff 65%);
+  color:var(--navy);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+  font-size:16px;
 }
 
-.hero .overlay {
-    background-color: rgba(0, 128, 128, 0.5); /* teal overlay with transparency */
-    padding: 50px;
-    text-align: center;
-    border-radius: 15px;
+/* Header / Nav */
+.header {
+  background:transparent;
+  position:sticky;
+  top:0;
+  z-index:60;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(6,34,36,0.04);
 }
+.container {max-width:1100px;margin:0 auto;padding:0 18px;}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy);}
+.brand .logo {
+  width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-600));
+  display:inline-flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px;
+  box-shadow: 0 6px 18px rgba(11,117,105,0.12);
+}
+.brand h1{margin:0;font-size:18px;font-weight:600;letter-spacing:0.2px}
 
-.hero h1 {
-    color: white;
-    font-size: 3rem;
-    margin-bottom: 20px;
+/* Nav */
+.nav {display:flex;gap:12px;align-items:center;}
+.nav a {
+  text-decoration:none;color:var(--navy);padding:8px 12px;border-radius:8px;font-weight:500;font-size:15px;
+  transition: all var(--transition);
 }
+.nav a:hover{background:rgba(11,117,105,0.06);color:var(--accent-600)}
+.nav a.active{background:var(--accent);color:white;box-shadow:0 6px 18px rgba(15,181,168,0.12)}
 
-.hero p {
-    color: white;
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
+/* Mobile: hamburger */
+.mobile-toggle{display:none}
+.hamburger{display:none;border:0;background:transparent;padding:8px;border-radius:8px}
+.hamburger svg{width:22px;height:22px;color:var(--navy)}
 
-.hero .btn {
-    display: inline-block;
-    background-color: white;
-    color: teal;
-    padding: 12px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
+/* Hero */
+.hero{
+  margin-top:26px;
+  padding:28px 0 46px;
 }
+.hero-grid{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+.hero-card{background:var(--card);padding:28px;border-radius:16px;box-shadow:var(--shadow)}
+.hero h2{margin:0 0 12px;font-size:28px}
+.hero p{margin:0 0 18px;color:var(--muted)}
+.btn {
+  display:inline-block;padding:10px 18px;border-radius:10px;background:var(--accent);
+  color:white;text-decoration:none;font-weight:600;transition:transform var(--transition);
+  box-shadow: 0 8px 20px rgba(11,117,105,0.12);
+}
+.btn:hover{transform:translateY(-3px);background:var(--accent-600)}
 
-.hero .btn:hover {
-    background-color: teal;
-    color: white;
+/* Grid & Cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px}
+.card{background:var(--card);padding:12px;border-radius:12px;box-shadow:var(--shadow);overflow:hidden;transition:transform var(--transition)}
+.card img{width:100%;height:150px;object-fit:cover;border-radius:8px}
+.card h3{margin:12px 0 6px;font-size:17px}
+.card a {text-decoration:none;color:var(--navy)}
+.card:hover{transform:translateY(-6px)}
+
+/* Movie page layout */
+.movie-page .movie-container {
+  display:flex;gap:22px;align-items:flex-start;
+  background:var(--card);padding:20px;border-radius:12px;box-shadow:var(--shadow)
 }
+.movie-poster{width:260px;border-radius:8px;object-fit:cover;flex:0 0 260px}
+.movie-details h2{margin-top:0}
+.synopsis{color:var(--muted);margin-top:10px}
+.gallery{display:flex;gap:10px;margin-top:18px}
+.gallery img{width:140px;height:90px;object-fit:cover;border-radius:8px;box-shadow:0 6px 16px rgba(2,25,30,0.06)}
+
+/* Shops listing */
+.shop-list .shop-logo{width:140px;height:140px;object-fit:cover;border-radius:12px;display:block;margin-bottom:12px}
+
+/* Wide images / maps */
+.wide-img{width:100%;border-radius:12px;box-shadow:var(--shadow)}
+
+/* Contact form */
+.contact-form{max-width:640px;background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+.contact-form label{display:block;margin-top:10px;font-weight:600}
+.contact-form input,.contact-form textarea{
+  width:100%;padding:10px;border-radius:8px;border:1px solid rgba(6,34,36,0.07);margin-top:6px;font-size:15px;
+}
+.contact-form button{margin-top:12px;background:var(--accent);border:0;color:white;padding:10px 14px;border-radius:10px;font-weight:600;cursor:pointer}
+
+/* Footer */
+.footer{margin-top:28px;padding:20px 0;color:var(--muted);font-size:14px;text-align:center}
 
 /* Responsive */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-    .hero p {
-        font-size: 1rem;
-    }
+@media (max-width:920px){
+  .hero-grid{grid-template-columns:1fr}
+  .movie-page .movie-container{flex-direction:column;align-items:center}
+  .movie-poster{width:100%;max-width:320px}
+  .nav{display:none}
+  .hamburger{display:inline-flex}
+  .mobile-toggle{display:block}
+}
+@media (max-width:520px){
+  .card img{height:120px}
+  .gallery img{width:110px;height:70px}
 }
