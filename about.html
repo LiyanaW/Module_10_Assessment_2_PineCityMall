@@ -1,40 +1,20 @@
-<!doctype html>
-<html lang="en">
+
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>About | Pine City Mall</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+    <title>About - Pine City Mall</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- same header as index — keep consistent -->
-  <header class="header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html"><span class="logo">PC</span><h1>Pine City Mall</h1></a>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html" class="active">About</a>
-        <a href="map.html">Map</a>
-        <a href="shops.html">Shops</a>
-        <a href="movies.html">Movies</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <button class="hamburger" onclick="toggleMobile()">☰</button>
-    </div>
-    <div class="container mobile-toggle" id="mobileNav" style="display:none;padding-bottom:12px;">
-      <nav style="display:flex;flex-direction:column;gap:8px">
-        <a href="movies.html">Movies</a><a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container" style="padding-top:20px;">
-    <h2>About Pine City Mall</h2>
-    <p>Pine City Mall offers an exceptional shopping, dining, and entertainment experience, featuring a wide variety of stores, a cinema complex, and family-friendly facilities.</p>
-    <img src="images/mall-interior.jpg" alt="Inside Pine City Mall" class="wide-img" style="margin-top:16px;">
-  </main>
-
-  <footer class="footer"><div class="container"><p>© 2025 Pine City Mall — All rights reserved.</p></div></footer>
-  <script>function toggleMobile(){const el=document.getElementById('mobileNav');el.style.display=(el.style.display==='none'?'block':'none');}</script>
+<header>
+<h1>About Pine City Mall</h1>
+<nav><a href="index.html">Home</a> | <a href="shops.html">Shops</a> | <a href="movies.html">Movies</a> | <a href="about.html">About</a> | <a href="contact.html">Contact</a></nav>
+</header>
+<div class="container">
+    <p>Images and info about Pine City Mall go here.</p>
+</div>
+<footer>
+<p>&copy; Pine City Mall</p>
+</footer>
 </body>
 </html>

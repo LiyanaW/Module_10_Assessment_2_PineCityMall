@@ -1,117 +1,50 @@
 
-<h1>Movies</h1>
-<div class="accordion">
-
-    <div class="accordion-item">
-        <button class="accordion-button" onclick="toggleAccordion('Galaxy-Wars')">Galaxy Wars</button>
-        <div class="accordion-content" id="Galaxy-Wars"><body>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movies - Pine City Mall</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 <header>
-<h1>The Escape</h1>
-<nav>
-<a href="index.html">Home</a>
-<a href="shops.html">Shops</a>
-<a href="movies.html">Movies</a>
-<a href="map.html">Map</a>
-<a href="contact.html">Contact</a>
-</nav>
+    <h1>Pine City Mall - Movies</h1>
+    <nav><a href="index.html">Home</a> | <a href="shops.html">Shops</a> | <a href="movies.html">Movies</a> | <a href="about.html">About</a> | <a href="contact.html">Contact</a></nav>
 </header>
-<main class="movie-page">
-<div class="movie-container">
-<img alt="The Escape poster" class="movie-poster" src="images/the-escape-poster.jpg"/>
-<div class="movie-details">
-<h2>The Escape</h2>
-<p><strong>Actors:</strong> Alex Star, Bella Lead</p>
-<p><strong>Age Restriction:</strong> 13+</p>
-<p><strong>Showing Times:</strong> 10:00 | 13:00 | 16:00</p>
-<p class="synopsis">A high-octane thriller following two strangers who must work together to escape a mysterious city filled with danger and deceit.</p>
-</div>
-</div>
-<div class="gallery">
-<img alt="The Escape preview 1" src="images/the-escape-preview1.jpg"/>
-<img alt="The Escape preview 2" src="images/the-escape-preview2.jpg"/>
-</div>
-</main>
-<footer>
-<p>© 2025 Pine City Mall</p>
-</footer>
-</body></div>
-    </div>
+<div class="container">
     
-    <div class="accordion-item">
-        <button class="accordion-button" onclick="toggleAccordion('The-Escape')">The Escape</button>
-        <div class="accordion-content" id="The-Escape"><body>
-<header><h1>The Escape</h1><nav><a href="movies.html">← Back</a></nav></header>
-<main>
-<img class="movie-poster" src="images/the-escape-poster.jpg"/>
-<p><strong>Actors:</strong> Alex Star, Bella Lead</p>
-<p><strong>Age:</strong> 13+</p>
-<p><strong>Showtimes:</strong> 11:00 | 14:00 | 17:00 | 20:00</p>
-<p>A thrilling spy adventure about survival and betrayal.</p>
-</main>
-<footer><p>© 2025 Pine City Mall</p></footer>
-</body></div>
+<div class="movie">
+    <img src="images/galaxy-wars.jpg" alt="Galaxy Wars">
+    <div>
+        <h3><a href="movie-1.html">Galaxy Wars</a></h3>
+        <p>Genre: Sci-Fi / Adventure</p>
+        <p>Actors: Chris Nova, Lee Star</p>
+        <p>Age: 13+</p>
     </div>
-    
-    <div class="accordion-item">
-        <button class="accordion-button" onclick="toggleAccordion('Family-Tales')">Family Tales</button>
-        <div class="accordion-content" id="Family-Tales"><body>
-<header><h1>Family Tales</h1><nav><a href="movies.html">← Back</a></nav></header>
-<main>
-<img class="movie-poster" src="images/family-tales-poster.jpg"/>
-<p><strong>Actors:</strong> Zara Hope, Liam Fields</p>
-<p><strong>Age:</strong> PG</p>
-<p><strong>Showtimes:</strong> 10:30 | 13:00 | 15:30 | 18:00</p>
-<p>A heartwarming family story full of laughter and love.</p>
-</main>
-<footer><p>© 2025 Pine City Mall</p></footer>
-</body></div>
-    </div>
-    
 </div>
-<style>
-.accordion-button {
-    width: 100%;
-    text-align: left;
-    padding: 12px;
-    font-size: 18px;
-    cursor: pointer;
-    background: #008080;
-    color: white;
-    border: none;
-    outline: none;
-    transition: background 0.3s;
-    margin-bottom: 2px;
-    border-radius: 6px;
-}
-.accordion-button:hover { background: #006666; }
 
-.accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease;
-    padding: 0 12px;
-    border-left: 2px solid #008080;
-    border-right: 2px solid #008080;
-    border-bottom: 2px solid #008080;
-    border-radius: 0 0 6px 6px;
-    margin-bottom: 10px;
-}
-</style>
-<script>
-function toggleAccordion(id){
-    // Close all other sections
-    var all = document.getElementsByClassName('accordion-content');
-    for(var i=0;i<all.length;i++){
-        if(all[i].id !== id){
-            all[i].style.maxHeight = null;
-        }
-    }
-    // Toggle current section
-    var content = document.getElementById(id);
-    if(content.style.maxHeight){
-        content.style.maxHeight = null;
-    } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-    }
-}
-</script>
+<div class="movie">
+    <img src="images/the-escape.jpg" alt="The Escape">
+    <div>
+        <h3><a href="movie-2.html">The Escape</a></h3>
+        <p>Genre: Action / Thriller</p>
+        <p>Actors: Alex Star, Bella Lead</p>
+        <p>Age: 13+</p>
+    </div>
+</div>
+
+<div class="movie">
+    <img src="images/family-tales.jpg" alt="Family Tales">
+    <div>
+        <h3><a href="movie-3.html">Family Tales</a></h3>
+        <p>Genre: Family / Comedy</p>
+        <p>Actors: Zara Hope, Liam Fields</p>
+        <p>Age: PG</p>
+    </div>
+</div>
+
+</div>
+<footer>
+    <p>&copy; Pine City Mall</p>
+</footer>
+</body>
+</html>
