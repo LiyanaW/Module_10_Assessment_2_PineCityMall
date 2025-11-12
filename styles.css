@@ -47,7 +47,7 @@ nav ul li a:hover {
   border-radius: 12px;
   width: 250px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(147,102,102,0.85);
 }
 .card img {
   width: 100%;
