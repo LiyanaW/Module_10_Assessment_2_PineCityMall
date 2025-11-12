@@ -5,10 +5,10 @@ body {
   padding: 0;
   background: url('images/interior2.jpg') center/cover no-repeat fixed;
   color: #eeecf2;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(15px);
 }
 nav {
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(228, 221, 221, 0.7);
   padding: 1em;
   text-align: center;
 }
