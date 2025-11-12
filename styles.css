@@ -4,11 +4,11 @@ body {
   margin: 0;
   padding: 0;
   background: url('images/interior2.jpg') center/cover no-repeat fixed;
-  color: #141415;
+  color: #ededf2;
   backdrop-filter: blur(10px);
 }
 nav {
-  background-color: rgba(35, 34, 34, 0.7);
+  background-color: rgba(242, 232, 232, 0.7);
   padding: 1em;
   text-align: center;
 }
