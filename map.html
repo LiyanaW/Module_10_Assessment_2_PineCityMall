@@ -1,27 +1,45 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Map - Pine City Mall</title>
+<title>Mall Map – Pine City Mall</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-<h1>Mall Map</h1>
+
 <nav>
-<a href="index.html">Home</a>
-<a href="shops.html">Shops</a>
-<a href="movies.html">Movies</a>
-<a href="map.html">Map</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shops.html">Shops</a></li>
+    <li><a href="movies.html">Movies</a></li>
+    <li><a href="map.html">Mall Map</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
 </nav>
-</header>
-<div class="container">
-<h2>Shop Locations</h2>
-<img src="images/mall-map-placeholder.jpg" alt="Mall Map" style="width:100%; border-radius:10px;">
-<p>Map placeholder showing shop locations within the mall.</p>
+
+<h2 style="text-align:center;margin-top:20px;">Mall Floor Plan</h2>
+<p style="text-align:center;">Simplified layout showing shop locations:</p>
+<div style="display:flex;justify-content:center;">
+<canvas id="mallMap" width="600" height="400" style="border:2px solid #000; background-color:white;"></canvas>
 </div>
+<script>
+const canvas = document.getElementById('mallMap');
+const ctx = canvas.getContext('2d');
+ctx.fillStyle = '#f4f4f4';
+ctx.fillRect(0,0,600,400);
+ctx.fillStyle = '#ccc';
+ctx.fillRect(50,50,150,100);
+ctx.fillRect(250,50,150,100);
+ctx.fillRect(450,50,100,300);
+ctx.fillStyle = '#000';
+ctx.font = '16px Poppins';
+ctx.fillText('Book Nook', 60, 120);
+ctx.fillText('FreshMart', 270, 120);
+ctx.fillText('Gadget World', 60, 200);
+ctx.fillText('Style Haven', 270, 200);
+ctx.fillText('Tech Hub', 60, 300);
+ctx.fillText('Food Court', 470, 200);
+</script>
 </body>
 </html>

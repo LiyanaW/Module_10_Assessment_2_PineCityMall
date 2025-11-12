@@ -1,55 +1,44 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Movies - Pine City Mall</title>
+<title>Movies – Pine City Mall</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-<h1>Movies</h1>
+
 <nav>
-<a href="index.html">Home</a>
-<a href="shops.html">Shops</a>
-<a href="movies.html">Movies</a>
-<a href="map.html">Map</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shops.html">Shops</a></li>
+    <li><a href="movies.html">Movies</a></li>
+    <li><a href="map.html">Mall Map</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
 </nav>
-</header>
-<div class="container">
 
-<div class="movie-card">
-<img src="images/galaxy-wars.jpg" alt="Galaxy Wars">
-<div>
-<h3>Galaxy Wars</h3>
-<p>Actors: Chris Nova, Lee Star</p>
-<p>Age Restriction: 13+</p>
-<a href="movie1.html" class="back-button">View Details</a>
-</div>
-</div>
+<h2 style="text-align:center;margin-top:20px;">Now Showing</h2>
+<div class="content">
 
-<div class="movie-card">
-<img src="images/the-escape.jpg" alt="The Escape">
-<div>
-<h3>The Escape</h3>
-<p>Actors: Alex Star, Bella Lead</p>
-<p>Age Restriction: 13+</p>
-<a href="movie2.html" class="back-button">View Details</a>
-</div>
-</div>
-
-<div class="movie-card">
-<img src="images/family-tales.jpg" alt="Family Tales">
-<div>
+<div class="card">
+<img src="../images/family-tales-poster.jpg" alt="Family Tales">
 <h3>Family Tales</h3>
-<p>Actors: Zara Hope, Liam Fields</p>
-<p>Age Restriction: PG</p>
-<a href="movie3.html" class="back-button">View Details</a>
-</div>
+<p><strong>Actors:</strong> Zara Hope, Liam Fields • <strong>Age:</strong> PG</p>
+<a class='back-btn' href='movies/family-tales.html'>View Movie</a>
 </div>
 
+<div class="card">
+<img src="images/the-escape-poster.png" alt="The Escape">
+<h3>The Escape</h3>
+<p><strong>Actors:</strong> Alex Star, Bella Lead • <strong>Age:</strong> 13+</p>
+<a class='back-btn' href='movies/the-escape.html'>View Movie</a>
 </div>
-</body>
-</html>
+
+<div class="card">
+<img src="images/galaxy-wars-poster.jpg" alt="Galaxy Wars">
+<h3>Galaxy Wars</h3>
+<p><strong>Actors:</strong> Chris Nova, Lee Star • <strong>Age:</strong> 13+</p>
+<a class='back-btn' href='movies/galaxy-wars.html'>View Movie</a>
+</div>
+</div></body></html>
